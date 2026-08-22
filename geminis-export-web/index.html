@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Consent Mode: denegado por defecto hasta que el visitante acepte -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'analytics_storage': 'denied',
+  'ad_storage': 'denied'
+});
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KPRJ87DM');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geminis Export SRL | Exportadora de Frutas y Vegetales Frescos | La Vega, República Dominicana</title>
+<meta name="description" content="Exportamos frutas y vegetales frescos tropicales desde República Dominicana a EE.UU., Alemania, Francia y Bélgica. +25 años de experiencia. FDA certified.">
+<link rel="icon" type="image/png" sizes="192x192" href="images/seal.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#163A24;
+    --forest-deep:#0F2A19;
+    --leaf:#8FC93A;
+    --leaf-deep:#5A9427;
+    --paper:#FAF9F4;
+    --paper-dim:#F0EEE4;
+    --ink:#1C231D;
+    --ink-soft:#4A5449;
+    --stamp:#B8863A;
+    --line:#D8D5C6;
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    color:var(--forest-deep);
+    line-height:1.15;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1160px; margin:0 auto; padding:0 32px;}
+  img{max-width:100%; display:block;}
+
+  /* Stamp / eyebrow signature element */
+  .stamp{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--stamp);
+    border:1px solid var(--stamp);
+    border-radius:var(--radius);
+    padding:5px 12px;
+    margin-bottom:20px;
+  }
+  .stamp::before{content:"§"; font-size:13px;}
+
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(250,249,244,.97);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    position:relative;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 32px; max-width:1160px; margin:0 auto;
+  }
+  .nav img{height:56px;}
+  .nav-links{display:flex; gap:32px; list-style:none;}
+  .nav-links a{
+    font-size:14px; font-weight:600; color:var(--ink-soft);
+    transition:color .2s;
+  }
+  .nav-links a:hover{color:var(--forest-deep);}
+  .nav-cta{
+    background:var(--forest-deep); color:var(--paper);
+    padding:10px 20px; border-radius:var(--radius);
+    font-size:13px; font-weight:600;
+    letter-spacing:.02em;
+  }
+  .nav-cta:hover{background:var(--leaf-deep);}
+  .burger{display:none; background:none; border:none; cursor:pointer; padding:4px; z-index:110;}
+  .burger span{display:block; width:24px; height:2px; background:var(--forest-deep); margin:5px 0; transition:transform .2s, opacity .2s;}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .burger.open span:nth-child(2){opacity:0;}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* Hero */
+  .hero{position:relative; overflow:hidden; background:var(--forest-deep);}
+  .hero-bg{
+    position:absolute; inset:0;
+    background-image:url('images/hero.png');
+    background-size:cover; background-position:center 30%;
+    opacity:.62;
+  }
+  .hero-overlay{
+    position:relative;
+    background:
+      linear-gradient(100deg, rgba(15,42,25,.94) 0%, rgba(15,42,25,.7) 40%, rgba(15,42,25,.15) 75%);
+    padding:130px 0 90px;
+  }
+  .hero-content{padding:0 32px; max-width:1160px; margin:0 auto; width:100%;}
+  .hero-content .stamp{color:var(--leaf); border-color:var(--leaf);}
+  .hero-content h1{
+    font-size:clamp(32px, 5vw, 54px);
+    color:#fff;
+    max-width:680px;
+    margin-bottom:20px;
+  }
+  .hero-content h1 em{font-style:italic; color:var(--leaf);}
+  .hero-content p{
+    color:#E6E9E2; font-size:17px; max-width:520px; margin-bottom:32px;
+  }
+  .hero-buttons{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:13px 26px; border-radius:var(--radius);
+    font-size:14px; font-weight:600; letter-spacing:.02em;
+    transition:transform .18s, background .18s;
+  }
+  .btn-primary{background:var(--leaf); color:var(--forest-deep);}
+  .btn-primary:hover{background:#fff; transform:translateY(-2px);}
+  .btn-outline{border:1px solid rgba(255,255,255,.5); color:#fff;}
+  .btn-outline:hover{border-color:#fff; transform:translateY(-2px);}
+
+  /* Manifest bar - route signature */
+  .manifest{
+    background:var(--forest-deep); border-top:1px solid rgba(255,255,255,.12);
+    padding:14px 0; overflow:hidden;
+  }
+  .manifest-track{
+    display:flex; gap:48px; white-space:nowrap;
+    font-family:'IBM Plex Mono', monospace; font-size:12px;
+    color:rgba(255,255,255,.65); letter-spacing:.05em;
+    animation:scroll 28s linear infinite;
+  }
+  .manifest-track span{display:flex; align-items:center; gap:10px;}
+  .manifest-track span::before{content:"→"; color:var(--leaf);}
+  @keyframes scroll{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+  }
+
+  /* Sections */
+  section{padding:88px 0;}
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(26px, 3.4vw, 38px);}
+  .section-head p{color:var(--ink-soft); font-size:16px; margin-top:14px;}
+
+  /* Quienes somos */
+  .about-grid{
+    display:grid; grid-template-columns:1.1fr .9fr; gap:64px; align-items:center;
+  }
+  .about-text p{color:var(--ink-soft); font-size:16px; margin-bottom:16px;}
+  .about-text p strong{color:var(--forest-deep);}
+  .stat-row{display:flex; gap:40px; margin-top:32px; padding-top:32px; border-top:1px solid var(--line);}
+  .stat b{
+    display:block; font-family:'Fraunces', serif; font-size:34px; color:var(--forest-deep);
+  }
+  .stat span{font-size:13px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.06em;}
+  .about-photo{
+    background:var(--paper-dim); border-radius:var(--radius); overflow:hidden;
+    aspect-ratio:4/5; display:flex; align-items:center; justify-content:center;
+  }
+  .about-photo img{object-fit:cover; width:100%; height:100%;}
+
+  /* Certifications - stamps */
+  .certs{background:var(--forest-deep);}
+  .certs .section-head h2, .certs .section-head p{color:#fff;}
+  .certs .section-head p{color:#B9C4B4;}
+  .certs .stamp{color:var(--leaf); border-color:var(--leaf);}
+  .cert-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
+    background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.14);
+  }
+  .cert-card{
+    background:var(--forest-deep); padding:32px 24px; text-align:center;
+  }
+  .cert-card .seal{
+    width:100px; height:68px; background:#fff; border-radius:6px;
+    display:flex; align-items:center; justify-content:center; margin:0 auto 18px;
+    padding:10px;
+  }
+  .cert-card .seal img{max-width:100%; max-height:100%; object-fit:contain;}
+  .cert-card h3{color:#fff; font-size:16px; margin-bottom:6px; font-weight:600; font-family:'Inter', sans-serif;}
+  .cert-card p{color:#9FAD98; font-size:12.5px;}
+
+  /* Mercados */
+  .markets-grid{
+    display:grid; grid-template-columns:repeat(5, 1fr); gap:24px;
+  }
+  .market-card{
+    border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px 22px; background:#fff;
+    transition:border-color .2s, transform .2s;
+  }
+  .market-card:hover{border-color:var(--leaf-deep); transform:translateY(-3px);}
+  .market-flag{
+    width:52px; height:36px; margin-bottom:14px; border-radius:3px; overflow:hidden;
+    box-shadow:0 0 0 1px var(--line);
+  }
+  .market-flag img{width:100%; height:100%; object-fit:cover; display:block;}
+  .market-card h3{font-size:17px; margin-bottom:6px;}
+  .market-card p{font-size:13px; color:var(--ink-soft);}
+
+  /* Productos */
+  .products{background:var(--paper-dim);}
+  .product-grid{
+    display:grid; grid-template-columns:repeat(5, 1fr); gap:20px;
+  }
+  .product-card{
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden; transition:transform .2s, box-shadow .2s;
+  }
+  .product-card:hover{transform:translateY(-4px); box-shadow:0 12px 28px rgba(22,58,36,.1);}
+  .product-photo{
+    aspect-ratio:1/1; overflow:hidden; background:#EEF2E6;
+  }
+  .product-photo img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s;}
+  .product-card:hover .product-photo img{transform:scale(1.06);}
+  .product-label{padding:12px 14px 16px; border-top:1px solid var(--line);}
+  .product-label b{display:block; font-size:13.5px; font-weight:600; color:var(--forest-deep);}
+  .product-label span{font-size:12px; color:var(--ink-soft);}
+  .product-note{
+    margin-top:20px; font-size:12.5px; color:var(--ink-soft);
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  /* Why choose us */
+  .why-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .why-card{background:var(--paper); padding:32px 24px;}
+  .why-card .num{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--leaf-deep);
+    font-weight:600; margin-bottom:14px; display:block;
+  }
+  .why-card h3{font-size:16.5px; margin-bottom:8px;}
+  .why-card p{font-size:13.5px; color:var(--ink-soft);}
+
+  /* Contact */
+  .contact{background:var(--forest-deep); color:#fff;}
+  .contact .section-head h2{color:#fff;}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px;}
+  .contact-info p{color:#C7D0C1; margin-bottom:28px; max-width:420px;}
+  .contact-item{
+    display:flex; gap:16px; margin-bottom:22px; align-items:flex-start;
+  }
+  .contact-item .ic{
+    width:38px; height:38px; border:1px solid var(--leaf); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    color:var(--leaf); font-size:15px;
+  }
+  .contact-item b{display:block; font-size:14px;}
+  .contact-item span{font-size:13.5px; color:#B9C4B4;}
+
+  .social-row{display:flex; gap:12px; margin-top:8px; margin-bottom:32px;}
+  .social-btn{
+    width:42px; height:42px; border:1px solid rgba(255,255,255,.3); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    color:#fff; transition:background .2s, border-color .2s;
+  }
+  .social-btn svg{width:19px; height:19px; fill:currentColor;}
+  .social-btn:hover{background:var(--leaf); border-color:var(--leaf); color:var(--forest-deep);}
+  .social-btn.pending{opacity:.4; cursor:default;}
+  .social-btn.pending:hover{background:none; border-color:rgba(255,255,255,.3); color:#fff;}
+
+  .map-wrap{
+    margin-top:36px; border-radius:var(--radius); overflow:hidden; border:1px solid rgba(255,255,255,.18);
+  }
+  .map-wrap iframe{width:100%; height:280px; display:block; filter:grayscale(.15) contrast(1.05);}
+  .map-btn-row{margin-top:14px;}
+  .map-link{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13px; font-weight:600; color:var(--leaf);
+    border:1px solid var(--leaf); border-radius:var(--radius);
+    padding:9px 16px;
+  }
+  .map-link:hover{background:var(--leaf); color:var(--forest-deep);}
+  .form-card{background:var(--paper); border-radius:var(--radius); padding:36px;}
+  .form-card h3{color:var(--forest-deep); font-size:19px; margin-bottom:20px;}
+  .form-row{margin-bottom:16px;}
+  .form-row label{
+    display:block; font-size:12px; font-weight:600; letter-spacing:.04em;
+    text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px;
+  }
+  .form-row input, .form-row textarea{
+    width:100%; border:1px solid var(--line); border-radius:var(--radius);
+    padding:11px 13px; font-family:'Inter', sans-serif; font-size:14px; color:var(--ink);
+    background:#fff;
+  }
+  .form-row input:focus, .form-row textarea:focus{outline:2px solid var(--leaf-deep); outline-offset:1px;}
+  .form-submit{
+    width:100%; background:var(--forest-deep); color:#fff; border:none;
+    padding:13px; border-radius:var(--radius); font-weight:600; font-size:14px;
+    cursor:pointer; margin-top:6px; transition:background .2s;
+  }
+  .form-submit:hover{background:var(--leaf-deep);}
+
+  /* Footer */
+  footer{background:var(--forest-deep); border-top:1px solid rgba(255,255,255,.12); padding:28px 0;}
+
+  /* Cookie banner */
+  #cookieBanner{
+    position:fixed; left:0; right:0; bottom:0; z-index:200;
+    background:var(--forest-deep); border-top:2px solid var(--leaf);
+    padding:18px 32px; display:none;
+    box-shadow:0 -6px 24px rgba(0,0,0,.25);
+  }
+  #cookieBanner.show{display:block;}
+  .cookie-inner{
+    max-width:1160px; margin:0 auto; display:flex; align-items:center;
+    justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .cookie-text{font-size:13.5px; color:#D7DED1; max-width:640px; line-height:1.5;}
+  .cookie-text a{color:var(--leaf);}
+  .cookie-buttons{display:flex; gap:12px; flex-shrink:0;}
+  .cookie-btn{
+    padding:10px 20px; border-radius:var(--radius); font-size:13px; font-weight:600;
+    cursor:pointer; border:1px solid rgba(255,255,255,.3); background:transparent; color:#fff;
+  }
+  .cookie-btn.accept{background:var(--leaf); color:var(--forest-deep); border-color:var(--leaf);}
+  @media (max-width:860px){
+    .cookie-inner{flex-direction:column; align-items:stretch;}
+    .cookie-buttons{justify-content:flex-end;}
+  }
+  .foot-row{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+    font-size:12.5px; color:#8FA089;
+  }
+  .foot-row a{color:#B9C4B4;}
+  .foot-links{display:flex; gap:20px;}
+  .foot-identity{display:flex; align-items:center; gap:12px;}
+  .foot-seal{width:34px; height:34px; border-radius:50%; flex-shrink:0;}
+
+  @media (max-width:860px){
+    .nav-links{
+      position:absolute; top:100%; left:-32px; right:-32px;
+      flex-direction:column; align-items:stretch; gap:0;
+      background:var(--paper); border-bottom:1px solid var(--line);
+      max-height:0; overflow:hidden; transition:max-height .3s ease;
+    }
+    .nav-links.open{max-height:420px; overflow-y:auto;}
+    .nav-links li{width:100%;}
+    .nav-links a{display:block; padding:16px 32px; border-bottom:1px solid var(--line); font-size:15px;}
+    .nav-links .nav-cta-item{padding:16px 32px;}
+    .nav-links .nav-cta{display:block; text-align:center; padding:13px 0; border-bottom:none;}
+    .burger{display:block;}
+    .about-grid, .contact-grid{grid-template-columns:1fr;}
+    .cert-grid, .why-grid{grid-template-columns:repeat(2,1fr);}
+    .markets-grid, .product-grid{grid-template-columns:repeat(2,1fr);}
+    .stat-row{flex-wrap:wrap; gap:24px;}
+    section{padding:56px 0;}
+    .hero-overlay{padding:100px 0 60px;}
+    .map-wrap iframe{height:220px;}
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPRJ87DM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+  <nav class="nav">
+    <img src="images/logo.png" alt="Geminis Export">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#certificaciones">Certificaciones</a></li>
+      <li><a href="#mercados">Mercados</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li class="nav-cta-item"><a href="https://wa.me/18498848744" class="nav-cta">WhatsApp</a></li>
+    </ul>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <span class="stamp">RNC 1-03-03404-7 · La Vega, RD</span>
+      <h1>Frutos y vegetales frescos de <em>República Dominicana</em> al mundo</h1>
+      <p>25 años exportando desde el corazón del Cibao a Estados Unidos, Europa, Alemania, Reino Unido y Canadá — con la trazabilidad y los permisos que un comprador internacional exige.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/18498848744" class="btn btn-primary">Escribir por WhatsApp</a>
+        <a href="#productos" class="btn btn-outline">Ver productos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="manifest">
+  <div class="manifest-track">
+    <span>LA VEGA, RD</span>
+    <span>ESTADOS UNIDOS</span>
+    <span>EUROPA</span>
+    <span>ALEMANIA</span>
+    <span>REINO UNIDO</span>
+    <span>CANADÁ</span>
+    <span>LA VEGA, RD</span>
+    <span>ESTADOS UNIDOS</span>
+    <span>EUROPA</span>
+    <span>ALEMANIA</span>
+    <span>REINO UNIDO</span>
+    <span>CANADÁ</span>
+  </div>
+</div>
+
+<section id="nosotros">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="stamp">Quiénes somos</span>
+        <h2 style="margin-bottom:22px;">Excelencia dominicana en exportación agrícola internacional</h2>
+        <p>Empresa especializada en la exportación de frutas y vegetales frescos hacia mercados internacionales, incluyendo <strong>Estados Unidos, Europa, Reino Unido y Canadá</strong>.</p>
+        <p>Contamos con <strong>más de 25 años de experiencia</strong> en el sector agrícola-exportador, garantizando productos de alta calidad que cumplen con los estándares internacionales.</p>
+        <p>Operamos con todos los permisos y regulaciones requeridas por el <strong>Ministerio de Agricultura, Aduanas, FDA e Impuestos Internos</strong>.</p>
+        <div class="stat-row">
+          <div class="stat"><b>25+</b><span>Años exportando</span></div>
+          <div class="stat"><b>5+</b><span>Mercados activos</span></div>
+          <div class="stat"><b>25+</b><span>Productos frescos</span></div>
+        </div>
+      </div>
+      <div class="about-photo">
+        <img src="images/products.png" alt="Selección de frutas y vegetales dominicanos Géminis Export">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certificaciones" class="certs">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="stamp">Cumplimiento</span>
+      <h2>Certificaciones y permisos vigentes</h2>
+      <p>Documentación completa exigida para exportar a mercados regulados como Estados Unidos y la Unión Europea.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="seal"><img src="images/certs/fda.jpg" alt="FDA"></div>
+        <h3>FDA Registered</h3>
+        <p>Food and Drug Administration, Estados Unidos</p>
+      </div>
+      <div class="cert-card">
+        <div class="seal"><img src="images/certs/agricultura.jpg" alt="Ministerio de Agricultura"></div>
+        <h3>Ministerio de Agricultura</h3>
+        <p>Exportador autorizado, República Dominicana</p>
+      </div>
+      <div class="cert-card">
+        <div class="seal"><img src="images/certs/dga.png" alt="DGA"></div>
+        <h3>Aduanas (DGA)</h3>
+        <p>Dirección General de Aduanas, RD</p>
+      </div>
+      <div class="cert-card">
+        <div class="seal"><img src="images/certs/dgii.png" alt="DGII"></div>
+        <h3>DGII</h3>
+        <p>RNC 1-03-03404-7</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mercados">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="stamp">Rutas de exportación</span>
+      <h2>Mercados que abastecemos</h2>
+      <p>Envíos consistentes a distribuidores e importadores en cuatro mercados internacionales.</p>
+    </div>
+    <div class="markets-grid">
+      <div class="market-card">
+        <div class="market-flag"><img src="images/flags/us.png" alt="Estados Unidos"></div>
+        <h3>Estados Unidos</h3>
+        <p>Distribución mayorista</p>
+      </div>
+      <div class="market-card">
+        <div class="market-flag"><img src="images/flags/eu.webp" alt="Europa"></div>
+        <h3>Europa</h3>
+        <p>Distribución mayorista</p>
+      </div>
+      <div class="market-card">
+        <div class="market-flag"><img src="images/flags/de.jpg" alt="Alemania"></div>
+        <h3>Alemania</h3>
+        <p>Distribución mayorista</p>
+      </div>
+      <div class="market-card">
+        <div class="market-flag"><img src="images/flags/gb.webp" alt="Reino Unido"></div>
+        <h3>Reino Unido</h3>
+        <p>Distribución mayorista</p>
+      </div>
+      <div class="market-card">
+        <div class="market-flag"><img src="images/flags/ca.png" alt="Canadá"></div>
+        <h3>Canadá</h3>
+        <p>Distribución mayorista</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="productos" class="products">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="stamp">Catálogo</span>
+      <h2>Nuestros productos</h2>
+      <p>Disponibilidad varía por temporada. Consulte precios FOB y calendario de cosecha actual.</p>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/avocado.png" alt="Avocado — Aguacate"></div>
+        <div class="product-label"><b>Avocado</b><span>Aguacate</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/chinese-okra.png" alt="Chinese Okra — Molondrón chino"></div>
+        <div class="product-label"><b>Chinese Okra</b><span>Molondrón chino</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/snake-gourd.png" alt="Snake Gourd — Calabaza larga"></div>
+        <div class="product-label"><b>Snake Gourd</b><span>Calabaza larga</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/soursop.png" alt="Soursop — Guanábana"></div>
+        <div class="product-label"><b>Soursop</b><span>Guanábana</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/mango.png" alt="Green Mango — Mango verde"></div>
+        <div class="product-label"><b>Green Mango</b><span>Mango verde</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/banana-flower.png" alt="Banana Flower — Flor de guineo"></div>
+        <div class="product-label"><b>Banana Flower</b><span>Flor de guineo</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/breadfruit.png" alt="Breadfruit — Fruta de pan"></div>
+        <div class="product-label"><b>Breadfruit</b><span>Fruta de pan</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/jamaican-pepper.png" alt="Jamaican Pepper — Ají caballero"></div>
+        <div class="product-label"><b>Jamaican Pepper</b><span>Ají caballero</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/orange.png" alt="Orange — Naranja"></div>
+        <div class="product-label"><b>Orange</b><span>Naranja</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/guava.png" alt="Guava — Guayaba"></div>
+        <div class="product-label"><b>Guava</b><span>Guayaba</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/curry-leaves.png" alt="Curry Leaves — Hojas de curry"></div>
+        <div class="product-label"><b>Curry Leaves</b><span>Hojas de curry</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/tindora.png" alt="Tindora"></div>
+        <div class="product-label"><b>Tindora</b><span>&nbsp;</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/flat-valor.png" alt="Flat Valor — Habichuela valor"></div>
+        <div class="product-label"><b>Flat Valor</b><span>Habichuela valor</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/chinese-eggplant.png" alt="Chinese Eggplant — Berenjena china"></div>
+        <div class="product-label"><b>Chinese Eggplant</b><span>Berenjena china</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/papaya.png" alt="Papaya"></div>
+        <div class="product-label"><b>Papaya</b><span>&nbsp;</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/banana.png" alt="Banana — Guineo"></div>
+        <div class="product-label"><b>Banana</b><span>Guineo</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/green-coconut.png" alt="Green Coconut — Coco Verde"></div>
+        <div class="product-label"><b>Green Coconut</b><span>Coco Verde</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/thai-chili.png" alt="Thai Chilli — Ají Tailandés"></div>
+        <div class="product-label"><b>Thai Chilli</b><span>Ají Tailandés</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/quenepas.png" alt="Quenepa — Spanish Lime"></div>
+        <div class="product-label"><b>Quenepa</b><span>Spanish Lime</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/chinese-calabash.png" alt="Chinese Calabash — Bangaña China"></div>
+        <div class="product-label"><b>Chinese Calabash</b><span>Bangaña China</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/aloe-vera.png" alt="Aloe Vera — Sábila"></div>
+        <div class="product-label"><b>Aloe Vera</b><span>Sábila</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/long-beans.png" alt="Long Beans — Vainitas Largas"></div>
+        <div class="product-label"><b>Long Beans</b><span>Vainitas Largas</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/bitter-melon.png" alt="Bitter Melon — Cundeamor"></div>
+        <div class="product-label"><b>Bitter Melon</b><span>Cundeamor</span></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-photo"><img src="images/products/indian-eggplant.png" alt="Indian Eggplant — Berenjena India"></div>
+        <div class="product-label"><b>Indian Eggplant</b><span>Berenjena India</span></div>
+      </div>
+
+    </div>
+    <p class="product-note">※ Disponibilidad por producto varía según temporada de cosecha.</p>
+  </div>
+</section>
+
+<section id="porque">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="stamp">Ventaja competitiva</span>
+      <h2>Por qué trabajar con Géminis Export</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="num">01</span>
+        <h3>25+ años de trayectoria</h3>
+        <p>Historia comprobable en exportación a mercados exigentes de EE.UU. y Europa.</p>
+      </div>
+      <div class="why-card">
+        <span class="num">02</span>
+        <h3>Certificaciones vigentes</h3>
+        <p>FDA, Ministerio de Agricultura, DGA y DGII, sin trámites pendientes.</p>
+      </div>
+      <div class="why-card">
+        <span class="num">03</span>
+        <h3>Calidad consistente</h3>
+        <p>Producto seleccionado bajo estándares internacionales de frescura.</p>
+      </div>
+      <div class="why-card">
+        <span class="num">04</span>
+        <h3>Logística confiable</h3>
+        <p>Envíos coordinados a EE.UU., Europa y el Caribe con documentación completa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="stamp">Hablemos</span>
+      <h2>Contáctenos</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p>Disponibles para discutir disponibilidad de producto, precios FOB y calendarios de envío.</p>
+
+        <div class="contact-item">
+          <div class="ic">☎</div>
+          <div><b>WhatsApp</b><span>+1 849-884-8744</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">☎</div>
+          <div><b>Teléfono / Oficina</b><span>+1 809-203-1432</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">✉</div>
+          <div><b>Email</b><span>Geminisexport01@gmail.com</span></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">⚑</div>
+          <div><b>Dirección</b><span>Carretera Sabaneta, Km 7, La Vega, República Dominicana</span></div>
+        </div>
+
+        <div class="social-row">
+          <a href="https://wa.me/18498848744" class="social-btn" aria-label="WhatsApp" title="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.09-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.6 0-3.1-.44-4.38-1.2l-.31-.19-3.02.79.8-2.95-.2-.31A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.38-5.98c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.4-.14 0-.3-.02-.46-.02s-.42.06-.64.3c-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/geminis-export-srl" class="social-btn" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a href="#" class="social-btn pending" aria-label="Instagram (próximamente)" title="Instagram — próximamente">
+            <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38-.66.67-1.07 1.34-1.38 2.13-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.13-.67-.66-1.34-1.07-2.13-1.38-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+          </a>
+          <a href="#" class="social-btn pending" aria-label="Facebook (próximamente)" title="Facebook — próximamente">
+            <svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+          </a>
+        </div>
+
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.3225273414337!2d-70.4268439!3d19.2247705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eafd55e5ffb8667%3A0xa8a60336ca2728cb!2sGEMINIS%20EXPORT%20SRL!5e0!3m2!1ses!2sdo!4v1785288530082!5m2!1ses!2sdo" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="map-btn-row">
+          <a href="https://maps.app.goo.gl/Ea8CwupMjVwrd9Yh9" target="_blank" rel="noopener" class="map-link">📍 Abrir en Google Maps</a>
+        </div>
+      </div>
+      <div class="form-card">
+        <h3>Solicitar catálogo y precios</h3>
+        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleFormSubmit(event)">
+          <input type="hidden" name="form-name" value="contacto" />
+          <p style="display:none;"><label>No llenar: <input name="bot-field" /></label></p>
+          <div class="form-row">
+            <label>Nombre</label>
+            <input type="text" name="nombre" required>
+          </div>
+          <div class="form-row">
+            <label>Empresa</label>
+            <input type="text" name="empresa">
+          </div>
+          <div class="form-row">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label>País</label>
+            <input type="text" name="pais" required>
+          </div>
+          <div class="form-row">
+            <label>Producto de interés</label>
+            <input type="text" name="producto">
+          </div>
+          <div class="form-row">
+            <label>Mensaje</label>
+            <textarea rows="3" name="mensaje"></textarea>
+          </div>
+          <button class="form-submit" type="submit">Enviar solicitud</button>
+          <p style="font-size:11.5px; color:var(--ink-soft); margin-top:12px; text-align:center;">Al enviar este formulario, acepta que usemos sus datos únicamente para responder su consulta comercial. Ver <a href="privacidad.html" style="color:var(--leaf-deep);">Política de Privacidad</a>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <div class="foot-identity">
+      <img src="images/seal.png" alt="Sello Géminis Export" class="foot-seal">
+      <span>RNC: 1-03-03404-7 · © 2026 Géminis Export SRL — La Vega, República Dominicana</span>
+    </div>
+    <div class="foot-links">
+      <a href="https://wa.me/18498848744">WhatsApp</a>
+      <a href="https://www.linkedin.com/company/geminis-export-srl">LinkedIn</a>
+      <a href="mailto:Geminisexport01@gmail.com">Email</a>
+      <a href="privacidad.html">Privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<div id="cookieBanner">
+  <div class="cookie-inner">
+    <p class="cookie-text">Usamos cookies analíticas para entender cómo los visitantes usan este sitio. Puede aceptar o rechazar su uso. Ver <a href="privacidad.html">Política de Privacidad</a>.</p>
+    <div class="cookie-buttons">
+      <button class="cookie-btn" id="cookieReject">Rechazar</button>
+      <button class="cookie-btn accept" id="cookieAccept">Aceptar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function handleFormSubmit(e){
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  fetch("/", {
+    method: "POST",
+    headers: {"Content-Type": "application/x-www-form-urlencoded"},
+    body: new URLSearchParams(data).toString()
+  })
+  .then(() => {
+    alert("Gracias — hemos recibido su solicitud. Le responderemos a la brevedad.");
+    form.reset();
+  })
+  .catch(() => {
+    alert("Hubo un problema al enviar el formulario. Por favor escríbanos directo por WhatsApp mientras lo resolvemos.");
+  });
+  return false;
+}
+
+const burgerBtn = document.getElementById('burgerBtn');
+const navLinks = document.getElementById('navLinks');
+burgerBtn.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  burgerBtn.classList.toggle('open', isOpen);
+  burgerBtn.setAttribute('aria-expanded', isOpen);
+});
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    burgerBtn.classList.remove('open');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// Cookie consent banner
+(function(){
+  const banner = document.getElementById('cookieBanner');
+  const saved = localStorage.getItem('cookie_consent');
+
+  function applyConsent(status){
+    gtag('consent', 'update', { 'analytics_storage': status, 'ad_storage': status });
+  }
+
+  if (saved === 'granted' || saved === 'denied') {
+    applyConsent(saved);
+  } else {
+    banner.classList.add('show');
+  }
+
+  document.getElementById('cookieAccept').addEventListener('click', function(){
+    localStorage.setItem('cookie_consent', 'granted');
+    applyConsent('granted');
+    banner.classList.remove('show');
+  });
+
+  document.getElementById('cookieReject').addEventListener('click', function(){
+    localStorage.setItem('cookie_consent', 'denied');
+    applyConsent('denied');
+    banner.classList.remove('show');
+  });
+})();
+</script>
+
+</body>
+</html>
