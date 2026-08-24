@@ -2,311 +2,229 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<style>
-  @page { size: A4; margin: 0; }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html, body{width:100%;}
-  body{
-    font-family:'Helvetica', Arial, sans-serif;
-    color:#242A25;
-    background:#FFFFFF;
-  }
-  .page{
-    width:100%;
-    min-height:297mm;
-    position:relative;
-    page-break-after:always;
-    background:#FFFFFF;
-  }
-  .page:last-child{page-break-after:auto;}
-
-  /* ---------- ENCABEZADO Y PIE, iguales en todas las páginas interiores ---------- */
-  .doc-header{
-    padding:14mm 16mm 5mm;
-    border-bottom:2px solid #163A24;
-  }
-  .doc-header .row{display:table; width:100%;}
-  .doc-header .lg{display:table-cell; vertical-align:middle; width:55%;}
-  .doc-header .lg img{height:18mm;}
-  .doc-header .meta{display:table-cell; vertical-align:middle; width:45%; text-align:right;
-    font-size:8.5px; color:#5B6058; line-height:1.6;}
-  .doc-header .meta b{color:#163A24;}
-
-  .doc-footer{
-    position:absolute; bottom:0; left:0; right:0;
-    padding:5mm 16mm 10mm;
-    border-top:1px solid #D8D5C6;
-    font-size:8px; color:#5B6058;
-    display:table; width:100%;
-  }
-  .doc-footer .fl{display:table-cell; width:70%;}
-  .doc-footer .fr{display:table-cell; width:30%; text-align:right;}
-
-  /* ---------- PORTADA ---------- */
-  .cover{padding:0;}
-  .cover-band{
-    background:#163A24; height:72mm; padding:16mm;
-    color:#fff; position:relative;
-  }
-  .cover-band img.logo{height:22mm; background:#fff; padding:5mm 8mm; border-radius:2px;}
-  .cover-band .doctype{
-    position:absolute; top:16mm; right:16mm;
-    font-size:9px; letter-spacing:1.5px; color:#B9C4B4; text-transform:uppercase;
-    text-align:right; line-height:1.6;
-  }
-  .cover-band .doctype b{display:block; color:#8FC93A; font-size:10px;}
-
-  .cover-title{padding:16mm 16mm 8mm;}
-  .cover-title h1{
-    font-size:25px; font-weight:700; color:#163A24; line-height:1.3;
-    margin-bottom:6mm; max-width:150mm;
-  }
-  .cover-title p{font-size:11.5px; color:#3F473F; line-height:1.65; max-width:155mm; margin-bottom:10mm;}
-
-  .cover-facts{
-    margin:0 16mm; border-top:1px solid #D8D5C6; border-bottom:1px solid #D8D5C6;
-    padding:6mm 0; display:table; width:calc(100% - 32mm);
-  }
-  .cover-facts .f{display:table-cell; width:25%; padding-right:6mm; vertical-align:top;}
-  .cover-facts .f b{display:block; font-size:20px; color:#163A24; font-weight:700;}
-  .cover-facts .f span{font-size:8.5px; color:#5B6058; text-transform:uppercase; letter-spacing:.5px;}
-
-  .cover-section{padding:8mm 16mm;}
-  .cover-section h3{
-    font-size:10px; text-transform:uppercase; letter-spacing:1px; color:#163A24;
-    margin-bottom:4mm; font-weight:700;
-  }
-  .cover-section p{font-size:10.5px; color:#3F473F; line-height:1.6;}
-
-  .certs-table{width:100%; display:table; margin-top:2mm;}
-  .certs-table .c{display:table-cell; width:25%; text-align:center; padding:0 3mm; vertical-align:top;}
-  .certs-table img{height:13mm; border:1px solid #D8D5C6; padding:2mm; background:#fff; margin-bottom:2mm;}
-  .certs-table span{font-size:8px; color:#5B6058; display:block;}
-
-  .markets-list{font-size:10.5px; color:#3F473F; line-height:2;}
-  .markets-list b{color:#163A24;}
-
-  .cat-table{width:100%; border-collapse:collapse; margin-top:2mm;}
-  .cat-table td{border:1px solid #D8D5C6; padding:5mm 6mm; width:50%; vertical-align:top;}
-  .cat-table td b{display:block; font-size:10.5px; color:#163A24; margin-bottom:2mm;}
-  .cat-table td span{font-size:9.5px; color:#5B6058; line-height:1.6;}
-
-  /* ---------- PAGINA DE PRODUCTOS ---------- */
-  .prod-body{padding:8mm 16mm 0;}
-  .prod-title{
-    font-size:13px; font-weight:700; color:#163A24; text-transform:uppercase;
-    letter-spacing:.5px; margin-bottom:6mm; padding-bottom:2mm; border-bottom:1px solid #D8D5C6;
-  }
-  .grid{width:100%;}
-  .row{display:table; width:100%; table-layout:fixed; margin-bottom:7mm;}
-  .cell{display:table-cell; width:25%; padding:0 2.8mm; vertical-align:top;}
-  .card{border:1px solid #D8D5C6;}
-  .card .ph{width:100%; height:52mm; display:block;}
-  .card .ph img{width:100%; height:52mm; display:block;}
-  .card .lb{padding:3.5mm 3.5mm 4mm; border-top:1px solid #D8D5C6; background:#FAFAF7;}
-  .card .lb b{display:block; font-size:10.5px; color:#163A24; font-weight:700;}
-  .card .lb span{font-size:9px; color:#5B6058;}
-
-  /* ---------- PAGINA DE CONTACTO ---------- */
-  .contact-body{padding:12mm 16mm;}
-  .contact-title{font-size:16px; font-weight:700; color:#163A24; margin-bottom:3mm;}
-  .contact-sub{font-size:10.5px; color:#5B6058; margin-bottom:12mm; max-width:150mm; line-height:1.6;}
-
-  .contact-table{width:100%; border-collapse:collapse; margin-bottom:12mm;}
-  .contact-table td{border:1px solid #D8D5C6; padding:5mm 6mm; font-size:10.5px; vertical-align:top;}
-  .contact-table td.k{
-    width:38mm; background:#F0EEE4; font-weight:700; color:#163A24;
-    text-transform:uppercase; font-size:9px; letter-spacing:.5px;
-  }
-
-  .sign-block{margin-top:16mm; display:table; width:100%;}
-  .sign-block .s1{display:table-cell; width:60%; vertical-align:top;}
-  .sign-block .s2{display:table-cell; width:40%; vertical-align:top; text-align:center;}
-  .sign-block img{height:22mm; margin-bottom:2mm;}
-  .sign-block .co{font-size:9.5px; color:#5B6058;}
-</style>
+<link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="w-full font-[Helvetica,Arial,sans-serif] text-[#242A25] bg-white">
 
 <!-- ================= PORTADA ================= -->
-<div class="page cover">
-  <div class="cover-band">
-    <img src="images/logo.png" class="logo">
-    <div class="doctype"><b>Catálogo de Exportación</b>Edición 2026</div>
+<div class="page relative w-full min-h-[297mm] break-after-page bg-white p-0">
+  <div class="relative h-[72mm] bg-forest p-[16mm] text-white">
+    <img src="images/logo.png" class="h-[22mm] rounded-[2px] bg-white p-[5mm_8mm]">
+    <div class="absolute right-[16mm] top-[16mm] text-right text-[9px] uppercase leading-[1.6] tracking-[1.5px] text-[#B9C4B4]"><b class="block text-[10px] text-leaf">Catálogo de Exportación</b>Edición 2026</div>
   </div>
 
-  <div class="cover-title">
-    <h1>Frutas y Vegetales Frescos de República Dominicana</h1>
-    <p>Géminis Export SRL es una empresa dominicana especializada en la exportación de produce tropical y vegetales étnicos, con más de 25 años de experiencia sirviendo a distribuidores e importadores en Estados Unidos, Europa, el Reino Unido y Canadá.</p>
+  <div class="p-[16mm_16mm_8mm]">
+    <h1 class="mb-[6mm] max-w-[150mm] text-[25px] font-bold leading-[1.3] text-forest">Frutas y Vegetales Frescos de República Dominicana</h1>
+    <p class="mb-[10mm] max-w-[155mm] text-[11.5px] leading-[1.65] text-[#3F473F]">Géminis Export SRL es una empresa dominicana especializada en la exportación de produce tropical y vegetales étnicos, con más de 25 años de experiencia sirviendo a distribuidores e importadores en Estados Unidos, Europa, el Reino Unido y Canadá.</p>
   </div>
 
-  <div class="cover-facts">
-    <div class="f"><b>25+</b><span>Años exportando</span></div>
-    <div class="f"><b>24+</b><span>Productos disponibles</span></div>
-    <div class="f"><b>5+</b><span>Mercados activos</span></div>
-    <div class="f"><b>1-03-03404-7</b><span>RNC</span></div>
+  <div class="mx-[16mm] table w-[calc(100%-32mm)] border-y border-line py-[6mm]">
+    <div class="table-cell w-1/4 pr-[6mm] align-top"><b class="block text-[20px] font-bold text-forest">25+</b><span class="text-[8.5px] uppercase tracking-[.5px] text-[#5B6058]">Años exportando</span></div>
+    <div class="table-cell w-1/4 pr-[6mm] align-top"><b class="block text-[20px] font-bold text-forest">24+</b><span class="text-[8.5px] uppercase tracking-[.5px] text-[#5B6058]">Productos disponibles</span></div>
+    <div class="table-cell w-1/4 pr-[6mm] align-top"><b class="block text-[20px] font-bold text-forest">5+</b><span class="text-[8.5px] uppercase tracking-[.5px] text-[#5B6058]">Mercados activos</span></div>
+    <div class="table-cell w-1/4 pr-[6mm] align-top"><b class="block text-[20px] font-bold text-forest">1-03-03404-7</b><span class="text-[8.5px] uppercase tracking-[.5px] text-[#5B6058]">RNC</span></div>
   </div>
 
-  <div class="cover-section">
-    <h3>Mercados que abastecemos</h3>
-    <p class="markets-list"><b>Estados Unidos</b> &nbsp;·&nbsp; <b>Europa</b> &nbsp;·&nbsp; <b>Alemania</b> &nbsp;·&nbsp; <b>Reino Unido</b> &nbsp;·&nbsp; <b>Canadá</b></p>
+  <div class="p-[8mm_16mm]">
+    <h3 class="mb-[4mm] text-[10px] font-bold uppercase tracking-[1px] text-forest">Mercados que abastecemos</h3>
+    <p class="text-[10.5px] leading-[1.6] text-[#3F473F]"><b class="text-forest">Estados Unidos</b> &nbsp;·&nbsp; <b class="text-forest">Europa</b> &nbsp;·&nbsp; <b class="text-forest">Alemania</b> &nbsp;·&nbsp; <b class="text-forest">Reino Unido</b> &nbsp;·&nbsp; <b class="text-forest">Canadá</b></p>
   </div>
 
-  <div class="cover-section" style="position:absolute; bottom:16mm; left:0; right:0;">
-    <h3>Certificaciones y permisos vigentes</h3>
-    <div class="certs-table">
-      <div class="c"><img src="images/certs/fda.jpg"><span>FDA Registered</span></div>
-      <div class="c"><img src="images/certs/agricultura.jpg"><span>Min. Agricultura RD</span></div>
-      <div class="c"><img src="images/certs/dga.png"><span>Aduanas (DGA)</span></div>
-      <div class="c"><img src="images/certs/dgii.png"><span>DGII</span></div>
+  <div class="absolute inset-x-0 bottom-[16mm] p-[8mm_16mm]">
+    <h3 class="mb-[4mm] text-[10px] font-bold uppercase tracking-[1px] text-forest">Certificaciones y permisos vigentes</h3>
+    <div class="table mt-[2mm] w-full">
+      <div class="table-cell w-1/4 px-[3mm] text-center align-top"><img src="images/certs/fda.jpg" class="mb-[2mm] inline-block h-[13mm] border border-line bg-white p-[2mm]"><span class="text-[9.5px] leading-[1.6] text-[#5B6058]">FDA Registered</span></div>
+      <div class="table-cell w-1/4 px-[3mm] text-center align-top"><img src="images/certs/agricultura.jpg" class="mb-[2mm] inline-block h-[13mm] border border-line bg-white p-[2mm]"><span class="text-[9.5px] leading-[1.6] text-[#5B6058]">Min. Agricultura RD</span></div>
+      <div class="table-cell w-1/4 px-[3mm] text-center align-top"><img src="images/certs/dga.png" class="mb-[2mm] inline-block h-[13mm] border border-line bg-white p-[2mm]"><span class="text-[9.5px] leading-[1.6] text-[#5B6058]">Aduanas (DGA)</span></div>
+      <div class="table-cell w-1/4 px-[3mm] text-center align-top"><img src="images/certs/dgii.png" class="mb-[2mm] inline-block h-[13mm] border border-line bg-white p-[2mm]"><span class="text-[9.5px] leading-[1.6] text-[#5B6058]">DGII</span></div>
     </div>
   </div>
 </div>
 
 <!-- ================= PRODUCTOS 1 ================= -->
-<div class="page">
-  <div class="doc-header">
-    <div class="row">
-      <div class="lg"><img src="images/logo.png"></div>
-      <div class="meta"><b>Catálogo de Exportación 2026</b>Página 2 de 4</div>
+<div class="page relative w-full min-h-[297mm] break-after-page bg-white">
+  <div class="p-[14mm_16mm_5mm] border-b-2 border-forest">
+    <div class="table w-full">
+      <div class="table-cell w-[55%] align-middle"><img src="images/logo.png" class="h-[18mm]"></div>
+      <div class="table-cell w-[45%] align-middle text-right text-[8.5px] leading-[1.6] text-[#5B6058]"><b class="text-forest">Catálogo de Exportación 2026</b>Página 2 de 4</div>
     </div>
   </div>
-  <div class="prod-body">
-    <div class="prod-title">Catálogo de Productos</div>
-    <div class="grid" id="grid1"><div class="row"><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/avocado.png"></div>
-<div class="lb"><b>Avocado</b><span>Aguacate</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/chinese-okra.png"></div>
-<div class="lb"><b>Chinese Okra</b><span>Molondrón chino</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/snake-gourd.png"></div>
-<div class="lb"><b>Snake Gourd</b><span>Calabaza larga</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/soursop.png"></div>
-<div class="lb"><b>Soursop</b><span>Guanábana</span></div>
-</div></div></div>
-<div class="row"><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/mango.png"></div>
-<div class="lb"><b>Green Mango</b><span>Mango verde</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/banana-flower.png"></div>
-<div class="lb"><b>Banana Flower</b><span>Flor de guineo</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/breadfruit.png"></div>
-<div class="lb"><b>Breadfruit</b><span>Fruta de pan</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/jamaican-pepper.png"></div>
-<div class="lb"><b>Jamaican Pepper</b><span>Ají caballero</span></div>
-</div></div></div>
-<div class="row"><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/orange.png"></div>
-<div class="lb"><b>Orange</b><span>Naranja</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/guava.png"></div>
-<div class="lb"><b>Guava</b><span>Guayaba</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/curry-leaves.png"></div>
-<div class="lb"><b>Curry Leaves</b><span>Hojas de curry</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/tindora.png"></div>
-<div class="lb"><b>Tindora</b><span>&nbsp;</span></div>
-</div></div></div>
-</div>
+  <div class="p-[8mm_16mm_0]">
+    <div class="mb-[6mm] border-b border-line pb-[2mm] text-[13px] font-bold uppercase tracking-[.5px] text-forest">Catálogo de Productos</div>
+    <div class="w-full">
+
+      <div class="mb-[7mm] table w-full [table-layout:fixed]">
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/avocado.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Avocado</b><span class="text-[9px] text-[#5B6058]">Aguacate</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/chinese-okra.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Chinese Okra</b><span class="text-[9px] text-[#5B6058]">Molondrón chino</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/snake-gourd.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Snake Gourd</b><span class="text-[9px] text-[#5B6058]">Calabaza larga</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/soursop.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Soursop</b><span class="text-[9px] text-[#5B6058]">Guanábana</span></div>
+        </div></div>
+      </div>
+
+      <div class="mb-[7mm] table w-full [table-layout:fixed]">
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/mango.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Green Mango</b><span class="text-[9px] text-[#5B6058]">Mango verde</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/banana-flower.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Banana Flower</b><span class="text-[9px] text-[#5B6058]">Flor de guineo</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/breadfruit.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Breadfruit</b><span class="text-[9px] text-[#5B6058]">Fruta de pan</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/jamaican-pepper.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Jamaican Pepper</b><span class="text-[9px] text-[#5B6058]">Ají caballero</span></div>
+        </div></div>
+      </div>
+
+      <div class="mb-[7mm] table w-full [table-layout:fixed]">
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/orange.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Orange</b><span class="text-[9px] text-[#5B6058]">Naranja</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/guava.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Guava</b><span class="text-[9px] text-[#5B6058]">Guayaba</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/curry-leaves.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Curry Leaves</b><span class="text-[9px] text-[#5B6058]">Hojas de curry</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/tindora.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Tindora</b><span class="text-[9px] text-[#5B6058]">&nbsp;</span></div>
+        </div></div>
+      </div>
+
+    </div>
   </div>
-  <div class="doc-footer">
-    <div class="fl">Disponibilidad por producto sujeta a temporada de cosecha. Consulte precio FOB vigente.</div>
-    <div class="fr">geminisexport.com</div>
+  <div class="absolute inset-x-0 bottom-0 table w-full border-t border-line p-[5mm_16mm_10mm] text-[8px] text-[#5B6058]">
+    <div class="table-cell w-[70%]">Disponibilidad por producto sujeta a temporada de cosecha. Consulte precio FOB vigente.</div>
+    <div class="table-cell w-[30%] text-right">geminisexport.com</div>
   </div>
 </div>
 
 <!-- ================= PRODUCTOS 2 ================= -->
-<div class="page">
-  <div class="doc-header">
-    <div class="row">
-      <div class="lg"><img src="images/logo.png"></div>
-      <div class="meta"><b>Catálogo de Exportación 2026</b>Página 3 de 4</div>
+<div class="page relative w-full min-h-[297mm] break-after-page bg-white">
+  <div class="p-[14mm_16mm_5mm] border-b-2 border-forest">
+    <div class="table w-full">
+      <div class="table-cell w-[55%] align-middle"><img src="images/logo.png" class="h-[18mm]"></div>
+      <div class="table-cell w-[45%] align-middle text-right text-[8.5px] leading-[1.6] text-[#5B6058]"><b class="text-forest">Catálogo de Exportación 2026</b>Página 3 de 4</div>
     </div>
   </div>
-  <div class="prod-body">
-    <div class="prod-title">Catálogo de Productos (continuación)</div>
-    <div class="grid" id="grid2"><div class="row"><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/flat-valor.png"></div>
-<div class="lb"><b>Flat Valor</b><span>Habichuela valor</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/chinese-eggplant.png"></div>
-<div class="lb"><b>Chinese Eggplant</b><span>Berenjena china</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/papaya.png"></div>
-<div class="lb"><b>Papaya</b><span>&nbsp;</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/banana.png"></div>
-<div class="lb"><b>Banana</b><span>Guineo</span></div>
-</div></div></div>
-<div class="row"><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/green-coconut.png"></div>
-<div class="lb"><b>Green Coconut</b><span>Coco Verde</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/thai-chili.png"></div>
-<div class="lb"><b>Thai Chilli</b><span>Ají Tailandés</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/quenepas.png"></div>
-<div class="lb"><b>Quenepa</b><span>Spanish Lime</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/chinese-calabash.png"></div>
-<div class="lb"><b>Chinese Calabash</b><span>Bangaña China</span></div>
-</div></div></div>
-<div class="row"><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/aloe-vera.png"></div>
-<div class="lb"><b>Aloe Vera</b><span>Sábila</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/long-beans.png"></div>
-<div class="lb"><b>Long Beans</b><span>Vainitas Largas</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/bitter-melon.png"></div>
-<div class="lb"><b>Bitter Melon</b><span>Cundeamor</span></div>
-</div></div><div class="cell"><div class="card">
-<div class="ph"><img src="images/products_cropped/indian-eggplant.png"></div>
-<div class="lb"><b>Indian Eggplant</b><span>Berenjena India</span></div>
-</div></div></div>
-</div>
+  <div class="p-[8mm_16mm_0]">
+    <div class="mb-[6mm] border-b border-line pb-[2mm] text-[13px] font-bold uppercase tracking-[.5px] text-forest">Catálogo de Productos (continuación)</div>
+    <div class="w-full">
+
+      <div class="mb-[7mm] table w-full [table-layout:fixed]">
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/flat-valor.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Flat Valor</b><span class="text-[9px] text-[#5B6058]">Habichuela valor</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/chinese-eggplant.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Chinese Eggplant</b><span class="text-[9px] text-[#5B6058]">Berenjena china</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/papaya.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Papaya</b><span class="text-[9px] text-[#5B6058]">&nbsp;</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/banana.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Banana</b><span class="text-[9px] text-[#5B6058]">Guineo</span></div>
+        </div></div>
+      </div>
+
+      <div class="mb-[7mm] table w-full [table-layout:fixed]">
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/green-coconut.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Green Coconut</b><span class="text-[9px] text-[#5B6058]">Coco Verde</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/thai-chili.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Thai Chilli</b><span class="text-[9px] text-[#5B6058]">Ají Tailandés</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/quenepas.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Quenepa</b><span class="text-[9px] text-[#5B6058]">Spanish Lime</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/chinese-calabash.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Chinese Calabash</b><span class="text-[9px] text-[#5B6058]">Bangaña China</span></div>
+        </div></div>
+      </div>
+
+      <div class="mb-[7mm] table w-full [table-layout:fixed]">
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/aloe-vera.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Aloe Vera</b><span class="text-[9px] text-[#5B6058]">Sábila</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/long-beans.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Long Beans</b><span class="text-[9px] text-[#5B6058]">Vainitas Largas</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/bitter-melon.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Bitter Melon</b><span class="text-[9px] text-[#5B6058]">Cundeamor</span></div>
+        </div></div>
+        <div class="table-cell w-1/4 px-[2.8mm] align-top"><div class="border border-line">
+          <img src="images/products_cropped/indian-eggplant.png" class="block h-[52mm] w-full">
+          <div class="border-t border-line bg-[#FAFAF7] p-[3.5mm_3.5mm_4mm]"><b class="block text-[10.5px] font-bold text-forest">Indian Eggplant</b><span class="text-[9px] text-[#5B6058]">Berenjena India</span></div>
+        </div></div>
+      </div>
+
+    </div>
   </div>
-  <div class="doc-footer">
-    <div class="fl">Disponibilidad por producto sujeta a temporada de cosecha. Consulte precio FOB vigente.</div>
-    <div class="fr">geminisexport.com</div>
+  <div class="absolute inset-x-0 bottom-0 table w-full border-t border-line p-[5mm_16mm_10mm] text-[8px] text-[#5B6058]">
+    <div class="table-cell w-[70%]">Disponibilidad por producto sujeta a temporada de cosecha. Consulte precio FOB vigente.</div>
+    <div class="table-cell w-[30%] text-right">geminisexport.com</div>
   </div>
 </div>
 
 <!-- ================= CONTACTO ================= -->
-<div class="page">
-  <div class="doc-header">
-    <div class="row">
-      <div class="lg"><img src="images/logo.png"></div>
-      <div class="meta"><b>Catálogo de Exportación 2026</b>Página 4 de 4</div>
+<div class="page relative w-full min-h-[297mm] bg-white">
+  <div class="p-[14mm_16mm_5mm] border-b-2 border-forest">
+    <div class="table w-full">
+      <div class="table-cell w-[55%] align-middle"><img src="images/logo.png" class="h-[18mm]"></div>
+      <div class="table-cell w-[45%] align-middle text-right text-[8.5px] leading-[1.6] text-[#5B6058]"><b class="text-forest">Catálogo de Exportación 2026</b>Página 4 de 4</div>
     </div>
   </div>
-  <div class="contact-body">
-    <div class="contact-title">Información de Contacto</div>
-    <p class="contact-sub">Para consultas sobre disponibilidad, precios FOB vigentes o coordinación de envíos, contáctenos directamente a través de cualquiera de los siguientes canales.</p>
+  <div class="p-[12mm_16mm]">
+    <div class="mb-[3mm] text-[16px] font-bold text-forest">Información de Contacto</div>
+    <p class="mb-[12mm] max-w-[150mm] text-[10.5px] leading-[1.6] text-[#5B6058]">Para consultas sobre disponibilidad, precios FOB vigentes o coordinación de envíos, contáctenos directamente a través de cualquiera de los siguientes canales.</p>
 
-    <table class="contact-table">
-      <tr><td class="k">WhatsApp</td><td>+1 849-884-8744 / +1 809-203-1432</td></tr>
-      <tr><td class="k">Email</td><td>Geminisexport01@gmail.com</td></tr>
-      <tr><td class="k">Sitio web</td><td>Geminisexport.com</td></tr>
-      <tr><td class="k">Dirección</td><td>Carretera Sabaneta, Km 7, La Vega, República Dominicana</td></tr>
+    <table class="mb-[12mm] w-full border-collapse">
+      <tr><td class="w-[38mm] border border-line bg-paper-dim p-[5mm_6mm] align-top text-[9px] font-bold uppercase tracking-[.5px] text-forest">WhatsApp</td><td class="border border-line p-[5mm_6mm] align-top text-[10.5px]">+1 849-884-8744 / +1 809-203-1432</td></tr>
+      <tr><td class="w-[38mm] border border-line bg-paper-dim p-[5mm_6mm] align-top text-[9px] font-bold uppercase tracking-[.5px] text-forest">Email</td><td class="border border-line p-[5mm_6mm] align-top text-[10.5px]">Geminisexport01@gmail.com</td></tr>
+      <tr><td class="w-[38mm] border border-line bg-paper-dim p-[5mm_6mm] align-top text-[9px] font-bold uppercase tracking-[.5px] text-forest">Sitio web</td><td class="border border-line p-[5mm_6mm] align-top text-[10.5px]">Geminisexport.com</td></tr>
+      <tr><td class="w-[38mm] border border-line bg-paper-dim p-[5mm_6mm] align-top text-[9px] font-bold uppercase tracking-[.5px] text-forest">Dirección</td><td class="border border-line p-[5mm_6mm] align-top text-[10.5px]">Carretera Sabaneta, Km 7, La Vega, República Dominicana</td></tr>
     </table>
 
-    <div class="sign-block">
-      <div class="s1"></div>
-      <div class="s2">
-        <img src="images/seal.png">
-        <div class="co">Géminis Export SRL</div>
+    <div class="table mt-[16mm] w-full">
+      <div class="table-cell w-[60%] align-top"></div>
+      <div class="table-cell w-[40%] align-top text-center">
+        <img src="images/seal.png" class="mb-[2mm] inline-block h-[22mm]">
+        <div class="text-[9.5px] text-[#5B6058]">Géminis Export SRL</div>
       </div>
     </div>
   </div>
-  <div class="doc-footer">
-    <div class="fl">Géminis Export SRL &nbsp;·&nbsp; Carretera Sabaneta, Km 7, La Vega, República Dominicana</div>
-    <div class="fr">geminisexport.com</div>
+  <div class="absolute inset-x-0 bottom-0 table w-full border-t border-line p-[5mm_16mm_10mm] text-[8px] text-[#5B6058]">
+    <div class="table-cell w-[70%]">Géminis Export SRL &nbsp;·&nbsp; Carretera Sabaneta, Km 7, La Vega, República Dominicana</div>
+    <div class="table-cell w-[30%] text-right">geminisexport.com</div>
   </div>
 </div>
 
